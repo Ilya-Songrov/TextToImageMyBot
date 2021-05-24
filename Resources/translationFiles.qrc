@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/translationFiles">
+        <file>translationFiles/TextToImageMyBot_UA.ts</file>
+    </qresource>
+</RCC>
