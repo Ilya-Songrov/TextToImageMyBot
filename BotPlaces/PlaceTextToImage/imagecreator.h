@@ -1,6 +1,11 @@
 #pragma once
 
 #include <QObject>
+#include <QDir>
+
+#include "FileWorker.h"
+#include "imageworker.h"
+#include "templates.h"
 
 #include <tgbot/tgbot.h>
 using namespace TgBot;
@@ -13,10 +18,10 @@ public:
 
     static void initValues();
 
-    static InputFile::Ptr getInputFile(const std::string &text);
+    static InputFile::Ptr getInputFile(const std::string &text, const QString &nameTemplate);
 
 private:
-    static QImage createImageFromText(const std::string &text);
+    static QString addTemplateToText(const std::string &text, const QString &nameTemplate);
 
 private:
     static const QString pathFolderTemp;

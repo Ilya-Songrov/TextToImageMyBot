@@ -29,13 +29,10 @@ public:
 
     bool isOpen() const;
 
-    bool addNote(const QString &note, const QString &group, const std::int64_t chat_id);
-    bool addNote(const std::string &note, const QString &group, const std::int64_t chat_id);
+    bool addTemplate(const QString &note, const QString &group, const std::int64_t chat_id);
+    bool addTemplate(const std::string &note, const QString &group, const std::int64_t chat_id);
 
-    bool addGroup(const QString &group, const std::int64_t chat_id);
-    bool addGroup(const std::string &group, const std::int64_t chat_id);
-
-    bool replaceNote(const QString &newNote, const QString &oldNote, const QString &group, const std::int64_t chat_id);
+    bool replaceTemplate(const QString &newNote, const QString &oldNote, const QString &group, const std::int64_t chat_id);
 
     bool existsGroup(const QString &group, const std::int64_t chat_id);
     bool existsGroup(const std::string &group, const std::int64_t chat_id);

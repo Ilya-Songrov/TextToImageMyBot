@@ -29,7 +29,7 @@ bool DatabaseConnector::isOpen() const
     return db.isOpen();
 }
 
-bool DatabaseConnector::addNote(const QString &note, const QString &group, const int64_t chat_id)
+bool DatabaseConnector::addTemplate(const QString &note, const QString &group, const int64_t chat_id)
 {
     if (note.isEmpty()){
         qWarning() << __FUNCTION__ << "failed: value cannot be empty" << Qt::endl;
@@ -57,37 +57,12 @@ bool DatabaseConnector::addNote(const QString &note, const QString &group, const
     return false;
 }
 
-bool DatabaseConnector::addNote(const std::string &note, const QString &group, const int64_t chat_id)
+bool DatabaseConnector::addTemplate(const std::string &note, const QString &group, const int64_t chat_id)
 {
-    return addNote(QString::fromStdString(note), group, chat_id);
+    return addTemplate(QString::fromStdString(note), group, chat_id);
 }
 
-bool DatabaseConnector::addGroup(const QString &group, const int64_t chat_id)
-{
-    if (group.isEmpty()){
-        qWarning() << __FUNCTION__ << "failed: value cannot be empty" << Qt::endl;
-        return false;
-    }
-    if (existsGroup(group, chat_id)) {
-        return true;
-    }
-    QSqlQuery query;
-    query.prepare("INSERT INTO my_notes (group_note, chat_id) VALUES (:group_note, :chat_id)");
-    query.bindValue(":group_note", group);
-    query.bindValue(":chat_id", varinatChatId(chat_id));
-    if(query.exec()){
-        return true;
-    }
-    qWarning() << __FUNCTION__ << "failed: " << query.lastError() << Qt::endl;
-    return false;
-}
-
-bool DatabaseConnector::addGroup(const std::string &group, const int64_t chat_id)
-{
-    return addGroup(QString::fromStdString(group), chat_id);
-}
-
-bool DatabaseConnector::replaceNote(const QString &newNote, const QString &oldNote, const QString &group, const int64_t chat_id)
+bool DatabaseConnector::replaceTemplate(const QString &newNote, const QString &oldNote, const QString &group, const int64_t chat_id)
 {
     if (newNote.isEmpty()){
         qWarning() << __FUNCTION__ << "failed: value cannot be empty" << Qt::endl;

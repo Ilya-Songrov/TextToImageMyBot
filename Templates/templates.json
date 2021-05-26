@@ -1,0 +1,11 @@
+{
+    "holychords": {
+        "1 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>1 куплет:</b>",
+        "2 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>2 куплет:</b>",
+        "3 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>3 куплет:</b>",
+        "4 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>4 куплет:</b>",
+        "Предприпев:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Предприпев:</b>",
+        "Припев:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Припев:</b>",
+        "Приспів:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Приспів:</b>"
+    }
+}

@@ -1,7 +1,5 @@
 #include "imageworker.h"
 
-#include <QLabel>
-
 ImageWorker::ImageWorker()
 {
 
@@ -9,29 +7,24 @@ ImageWorker::ImageWorker()
 
 QPixmap ImageWorker::getPixmapFromText(const QString &text)
 {
-    QPixmap pix;
-
-    QFont font("Ubuntu Mono", 12);
-    QFontMetrics fm(font);
+    const QFont font("Calibri", 12);
+    const QFontMetrics fm(font);
     QSize textSize = fm.size(Qt::TextExpandTabs, text);
+    textSize.setWidth(textSize.width() < 600 ? 600 : textSize.width());
+    textSize.setWidth(textSize.height() < 1280 ? 1280 : textSize.height());
 
     QLabel myLabel;
-    myLabel.resize(textSize);
+//    myLabel.setStyleSheet("QLabel { background-color : white; color : blue; }");
+    myLabel.setStyleSheet("QLabel { background-color : white;}");
+    myLabel.setMargin(55);
+//    myLabel.resize(textSize);
+    myLabel.resize(QSize(textSize.width() + myLabel.margin() * 2, textSize.height() + myLabel.margin() * 2));
     myLabel.setFont(font);
     myLabel.setAlignment(Qt::AlignLeft);
     myLabel.setText(text);
+//    pix = myLabel.grab(QRect(QPoint(), QSize(myLabel.width() + myLabel.margin(), myLabel.height() + myLabel.margin())));
+    QPixmap pix;
     pix = myLabel.grab(QRect(QPoint(), myLabel.size()));
-
-
-#ifdef QT_DEBUG
-    myLabel.setText("<strong>Hello</strong><font color=red>Wanderson !");
-    pix.fill(Qt::red);
-    pix = myLabel.grab(QRect(QPoint(), myLabel.size()));
-    QLabel *label = new QLabel;
-    label->resize(QSize(222, 222));
-    label->setPixmap(pix);
-    label->show();
-#endif
     return pix;
 }
 

@@ -21,6 +21,7 @@ SOURCES += \
     BotPlaces/PlaceStart/placestart.cpp \
     BotPlaces/PlaceTextToImage/imagecreator.cpp \
     BotPlaces/PlaceTextToImage/imageworker.cpp \
+    BotPlaces/PlaceTextToImage/templates.cpp \
     Content/Content.cpp \
     Database/DatabaseConnector.cpp \
     Database/managerdatabase.cpp \
@@ -36,10 +37,12 @@ HEADERS += \
     Anomalies/ExceptionHandler.h \
     BotPlaces/PlaceAbstract.h \
     BotPlaces/PlaceAdditional/PlaceAdditional.h \
+    BotPlaces/PlaceTextToImage/OneTemplate.h \
     BotPlaces/PlaceTextToImage/PlaceTextToImage.h \
     BotPlaces/PlaceStart/placestart.h \
     BotPlaces/PlaceTextToImage/imagecreator.h \
     BotPlaces/PlaceTextToImage/imageworker.h \
+    BotPlaces/PlaceTextToImage/templates.h \
     Content/ChatActions.h \
     Content/Content.h \
     Content/chatsettings.h \

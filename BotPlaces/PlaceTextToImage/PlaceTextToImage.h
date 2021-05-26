@@ -16,5 +16,10 @@ public:
 private:
     void onAnyMessage(const Message::Ptr &message);
     void onAnyCallbackQuery(const CallbackQuery::Ptr &callbackQuery);
+
+
+#ifdef QT_DEBUG
+    void createDefauilTemplates();
+#endif
 };
 

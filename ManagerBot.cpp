@@ -5,6 +5,7 @@ ManagerBot::ManagerBot(const QString token, QObject *parent) : QObject(parent)
   , appTranslator(":/translationFiles/NoteBot_UA.qm")
   , mapAllChats(new QMap<std::uint64_t, ChatActions>())
 {
+    Templates::initValues();
     ImageCreator::initValues();
     Content::initContent();
     initGlobalData(token.isEmpty() ? getTokenFromFile() : token);
