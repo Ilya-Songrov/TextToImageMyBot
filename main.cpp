@@ -1,5 +1,5 @@
-#include <QCoreApplication>
 #include <QApplication>
+#include <QtWebEngine>
 
 #include "ApplicationNotify.h"
 #include "ManagerBot.h"
@@ -12,6 +12,8 @@
 int main(int argc, char *argv[])
 {
     try {
+        QtWebEngine::initialize();
+
         ApplicationNotify<QApplication> app(argc, argv);
         app.setApplicationVersion(APP_VERSION);
 //        QObject::connect(&Errors::getInstance(), &Errors::signalExceptionOccurred, &app, &decltype(app)::quit);

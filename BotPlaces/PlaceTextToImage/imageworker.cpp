@@ -7,22 +7,25 @@ ImageWorker::ImageWorker()
 
 QPixmap ImageWorker::getPixmapFromText(const QString &text)
 {
-    const QFont font("Calibri", 12);
-    const QFontMetrics fm(font);
-    QSize textSize = fm.size(Qt::TextExpandTabs, text);
-    textSize.setWidth(textSize.width() < 600 ? 600 : textSize.width());
-    textSize.setWidth(textSize.height() < 1280 ? 1280 : textSize.height());
+#ifdef QT_DEBUG
+    qDebug() << "Text" << text << Qt::endl;
+    FileWorker::writeFile(text.toUtf8(), "../text.txt");
+#endif
+//    const QFont font("Calibri", 22);
+//    const QFontMetrics fm(font);
+//    QSize textSize = fm.size(Qt::TextExpandTabs, text);
+//    textSize.setWidth(textSize.width() < 600 ? 600 : textSize.width());
+//    textSize.setWidth(textSize.height() < 1280 ? 1280 : textSize.height());
 
+    const auto id = QFontDatabase::addApplicationFont("/home/songrov/DeveloperRoot/Projects_Main/Ilya_Songrov/TextToImageMyBot/"
+"TextToImageMyBot/Templates/holychords/RubrikNew-Light.otf");
+    qDebug() << "id" << QFontDatabase::applicationFontFamilies(id) << Qt::endl;
     QLabel myLabel;
-//    myLabel.setStyleSheet("QLabel { background-color : white; color : blue; }");
-    myLabel.setStyleSheet("QLabel { background-color : white;}");
-    myLabel.setMargin(55);
-//    myLabel.resize(textSize);
-    myLabel.resize(QSize(textSize.width() + myLabel.margin() * 2, textSize.height() + myLabel.margin() * 2));
-    myLabel.setFont(font);
-    myLabel.setAlignment(Qt::AlignLeft);
+//    myLabel.setStyleSheet("QLabel { background-color : white; margin: 60px; }");
+//    myLabel.setStyleSheet("QLabel { background-color : white; }");
+//    myLabel.setFont(QFont());
     myLabel.setText(text);
-//    pix = myLabel.grab(QRect(QPoint(), QSize(myLabel.width() + myLabel.margin(), myLabel.height() + myLabel.margin())));
+    myLabel.resize(myLabel.sizeHint());
     QPixmap pix;
     pix = myLabel.grab(QRect(QPoint(), myLabel.size()));
     return pix;

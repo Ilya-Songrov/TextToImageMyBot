@@ -9,6 +9,9 @@
 #include <QPainter>
 #include <QTimer>
 #include <QLabel>
+#include <QFontDatabase>
+
+#include "FileWorker.h"
 
 class ImageWorker
 {

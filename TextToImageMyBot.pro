@@ -2,6 +2,8 @@ QT      += gui
 QT      += widgets
 QT      += sql
 QT      += concurrent
+QT      += webengine
+QT      += webenginewidgets
 
 CONFIG += c++14 console
 CONFIG -= app_bundle

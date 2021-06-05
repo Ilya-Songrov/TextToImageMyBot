@@ -1,11 +1,16 @@
-{
-    "holychords": {
-        "1 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>1 куплет:</b>",
-        "2 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>2 куплет:</b>",
-        "3 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>3 куплет:</b>",
-        "4 куплет:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>4 куплет:</b>",
-        "Предприпев:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Предприпев:</b>",
-        "Припев:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Припев:</b>",
-        "Приспів:": "<b style='color: #51ab6c; padding: 3px 0 3px 1.5rem; background: \"rgb(241, 245, 241)\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Приспів:</b>"
+[
+    {
+        "name": "holychords",
+        "replacers": {
+            "1 куплет:": "<b class=videlit_line>1 куплет:</b>",
+            "2 куплет:": "<b style='color: #51ab6c; padding: 9px 0 9px 1.5rem; background: \"#f1f5f1\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>2 куплет:</b>",
+            "3 куплет:": "<b style='color: #51ab6c; padding: 9px 0 9px 1.5rem; background: \"#f1f5f1\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>3 куплет:</b>",
+            "4 куплет:": "<b style='color: #51ab6c; padding: 9px 0 9px 1.5rem; background: \"#f1f5f1\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>4 куплет:</b>",
+            "Предприпев:": "<b style='color: #51ab6c; padding: 9px 0 9px 1.5rem; background: \"#f1f5f1\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Предприпев:</b>",
+            "Припев:": "<b style='color: #51ab6c; padding: 9px 0 9px 1.5rem; background: \"#f1f5f1\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Припев:</b>",
+            "Приспів:": "<b style='color: #51ab6c; padding: 9px 0 9px 1.5rem; background: \"#f1f5f1\"; text-transform: uppercase; min-width: 50%; display: inline-block; margin-left: -1.5rem;'>Приспів:</b>"
+        },
+        "tagBegin": "<!DOCTYPE html><html><meta charset='utf-8'><body><style>  body {   margin: 90px;   background: red;  }.videlit_line {    color: #51ab6c;    padding: 3px 0 3px 1.5rem;    background: rgb(241, 245, 241);    text-transform: uppercase;    min-width: 30%;    display: inline-block;    margin-left: -1.5rem;}</style><pre style=font-family:'Rubrik New'; font-size: 12px; position: relative;>",
+        "tagEnd": "</pre></div></body></html>"
     }
-}
+]

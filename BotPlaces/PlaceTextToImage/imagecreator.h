@@ -3,6 +3,14 @@
 #include <QObject>
 #include <QDir>
 
+#ifdef QT_DEBUG
+#include <QTextEdit>
+#include <QTextBrowser>
+#include <QWebEngineView>
+#include <QWebEnginePage>
+#include <QWebEngineSettings>
+#endif
+
 #include "FileWorker.h"
 #include "imageworker.h"
 #include "templates.h"
@@ -21,6 +29,9 @@ public:
     static InputFile::Ptr getInputFile(const std::string &text, const QString &nameTemplate);
 
 private:
+#ifdef QT_DEBUG
+    static void testFunction();
+#endif
     static QString addTemplateToText(const std::string &text, const QString &nameTemplate);
 
 private:

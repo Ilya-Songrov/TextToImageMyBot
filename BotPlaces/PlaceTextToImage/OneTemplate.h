@@ -22,5 +22,7 @@ struct Replacer{
 
 struct OneTemplate{
     QString name;
+    QString tagBegin;
+    QString tagEnd;
     QVector<Replacer> vecReplacers;
 };

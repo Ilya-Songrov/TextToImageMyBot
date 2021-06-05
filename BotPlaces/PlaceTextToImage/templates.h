@@ -33,7 +33,8 @@ public:
 
 private:
     static void createFolders();
-    static OneTemplate createOneTemplateFromObj(const QJsonObject &objReplacer, const QString &name);
+    static void updateTemplateInArray(QJsonArray *arr, const QJsonObject &objOneTemplate);
+    static OneTemplate createOneTemplateFromObj(const QJsonObject &objOneTemplate);
     static QJsonObject createObjFromOneTemplate(const OneTemplate &oneTemplate);
 
 private:
